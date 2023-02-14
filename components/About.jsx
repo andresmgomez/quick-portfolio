@@ -1,43 +1,64 @@
-import React from 'react'
-import Link from 'next/link'
+import { useContext } from 'react'
+import Image from 'next/image'
+
 import { motion } from 'framer-motion'
+import { NavigateContext } from '@/store/context/navigateContext'
 
 function About() {
-   return (
-      <>
-         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className='h-screen flex flex-col text-center sm:text-left max-w-7xl px-10 items-center justify-center mx-auto'
-         >
-            <h3 className="uppercase tracking-[20px] text-gray-300 text-2xl font-bold mb-10 sm:mb-20">
-               About Me
-            </h3>
-            <div className="sm:px-6">
-               <div className="space-y-3 text-gray-400 sm:space-y-5 sm:px-5">
-                  <h3 className='text-xl sm:text-2xl font-semibold text-[#eec718] uppercase'>A journey through front-end development</h3>
-                  <p className="px-3 sm:px-0">
-                     Hi, I'm Miguel, and I had been developing websites since 2014 Back then, there was a need for making websites more
-                     interactive, plus scalable, and WordPress just achieve that.
-                  </p>
-                  <p className="px-3 sm:px-0">
-                     In that year, I started working as a WordPress Developer, for a local agency called Macroformas.
-                     One of primary tasks were, to design web pages using HTML, CSS, and some JavaScript, and built
-                     custom themes that were compatible with their CMS. At the same time, I got a job as a Web Developer
-                     in a local marketing agency, named OMG National, which I learned how to manage and built eCommerce
-                     stores.
-                  </p>
-                  <p className="px-3 sm:px-0">
-                     Recently, I graduated from an intensive coding bootcamp, that teaches the skills to become a Full
-                     Stack Developer. Over there, I learned the technologies that makes the backend, and how to connect
-                     with the frontend. Right now, I am looking for my first job as a Software Enginner.
-                  </p>
-               </div>
-            </div>
-         </motion.div>
-      </>
-   )
+	const { openPopupPage } = useContext(NavigateContext)
+
+	return (
+		<motion.section
+			initial={{ opacity: 0 }}
+			whileInView={{ opacity: 1 }}
+			transition={{ duration: 1 }}
+			className='section-area'
+			id='about-me'
+		>
+			<div className='page-content'>
+				<div className='about-me w-full flex mt-7'>
+					<div className='left w-[40%]'>
+						<div className='image relative'>
+							<Image
+								className='h-[420px] w-[310px] rounded-[10px]'
+								src='/assets/img/my-portrait.jpg'
+								alt=''
+								width={310}
+								height={430}
+							/>
+						</div>
+					</div>
+					<div className='right w-[60%] pl-[100px]'>
+						<div className='short w-full border-dashed border-[rgba(255,255,255,.15)] border-b mt-2'>
+							<h3 className='name uppercase text-[40px] font-bold'>
+								About <span className=' text-[#ffe925]'>Me</span>
+							</h3>
+						</div>
+						<div className='float-left mb-[36px] w-[410px]'>
+							<div className='space-y-3 text-gray-400'>
+								<p>
+									Hello, I'm Miguel and I have been developing websites, since 2014. From
+									blogging and personal websites, to online stores hosted in WordPress, I
+									started to design static pages, and then converted into custom themes.
+								</p>
+								<p>
+									Also, I have some experience designing web templates, and customizing
+									it to release landing pages, for small business. Mostly, I have worked
+									with start ups that are looking to reach an audience in Latin America.
+								</p>
+							</div>
+						</div>
+						<div className='primary-btn'>
+							<a href='#'>Read More</a>
+							{/* <a href='#' onClick={() => openPopupPage()}>
+								Read More
+							</a> */}
+						</div>
+					</div>
+				</div>
+			</div>
+		</motion.section>
+	)
 }
 
 export default About

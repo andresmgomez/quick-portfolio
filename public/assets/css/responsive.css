@@ -1,0 +1,19 @@
+@media (max-width: 1400px) {
+   .wrapper-page,
+   .navbar-header {
+      width: 800px !important;
+   }
+
+   .wrapper-page {
+      top: 80px !important;
+      bottom: 80px !important;
+   }
+}
+
+@media (max-width: 1040px) {
+   .wrapper-page {
+      width: 100% !important;
+      top: 70px !important;
+      bottom: 70px !important;
+   }
+}

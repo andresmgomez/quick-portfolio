@@ -1,0 +1,73 @@
+.section-area {
+   transition: visibility 0.5s linear, opacity linear;
+   -moz-transition: visibility 0.5s linear, opacity linear;
+   -webkit-transition: visibility 0.5s linear, opacity linear;
+   -o-transition: visibility 0.5s linear, opacity linear;
+}
+
+.hero-content .positions {
+   margin-bottom: 40px;
+   color: #a2a2a2;
+   font-size: 25px;
+   font-weight: 500;
+}
+
+.hero-content .positions p {
+   color: #fff;
+   font-weight: 600;
+}
+
+.hero-content .positions .my-roles {
+   display: inline-block;
+   position: relative;
+   text-align: left;
+}
+
+.hero-content .positions .my-roles p {
+   display: inline-block;
+   position: absolute;
+   white-space: nowrap;
+   left: 0;
+   top: 0;
+}
+
+.hero-content .positions .my-roles p.is-visible {
+   position: relative;
+}
+
+.popup-modal .about_popup_details .partners .list ul {
+   min-width: calc(100% + 12px);
+}
+
+.popup-modal .about_popup_details .partners .list_inner {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.popup-modal .about_popup_details .testimonial .list ul li .text:before {
+   position: absolute;
+   content: '';
+   height: 0;
+   width: 0;
+   top: 100%;
+   left: 50px;
+   border: solid transparent;
+   border-top-color: #333;
+   border-width: 18px 18px 0 0;
+}
+
+.popup-modal .about_popup_details .testimonial .list ul li .text:after {
+   position: absolute;
+   content: '';
+   top: 100%;
+   left: 50px;
+   height: 0;
+   width: 0;
+   border: solid transparent;
+   border-top-color: #222;
+   border-width: 14px 13px 0 0;
+   margin-left: 2px;
+}
+
